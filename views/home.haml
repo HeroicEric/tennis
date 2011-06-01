@@ -1,0 +1,27 @@
+%h1 Mapping, Brah.
+
+#search
+  %form(action="/" method="post")
+    %label(for="search") Search
+    %input(type="text" name="search" placeholder="Street, City, Zip, Whatever!")
+    %input(type="submit" value="Search")
+
+#map(style="width:500px; height: 500px")
+
+:javascript
+  function initialize() {
+    var location = new google.maps.LatLng(#{@lat}, #{@lng});
+    var myOptions = {
+      zoom: 13,
+      center: location,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map"),
+      myOptions);
+
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      title: "#{@formatted_address}"
+    });
+  }
