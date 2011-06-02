@@ -1,13 +1,29 @@
-%h1 Mapping, Brah.
+%h1 Find an Instructor
+%hr
 
 #search
   %form(action="/" method="post")
     %label(for="search") Search
     %input(type="text" name="search" placeholder="Street, City, Zip, Whatever!")
+    %label(for="range") Range
+    %select(name="range")
+      %option(value="5") 5 Miles
+      %option(value="10") 10 Miles
+      %option(value="25") 25 Miles
+      %option(value="50") 50 Miles
+      %option(value="100") 100 Miles
     %input(type="submit" value="Search")
 
-%h3= @formatted_address
-#map(style="width:500px; height: 500px")
+%h2 Instructors near #{@formatted_address}
+%hr
+- if @instructors
+  .instructor-list
+    - @instructors.each do |ins|
+      .instructor
+        %h3= ins.name
+        %p= ins.location
+
+#map(style="width:400px; height: 400px")
 
 :javascript
   function initialize() {

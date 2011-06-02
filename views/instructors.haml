@@ -1,0 +1,10 @@
+%h1 Instructors
+- unless @instructors.empty?
+  .instructor-list
+    - @instructors.each do |ins|
+      .instructor
+        %h3= ins.name
+        %p= ins.location
+- else
+  %p There aren't any instructors yet.
+%a.button(href="/instructor/new") Add Instructor
