@@ -14,9 +14,9 @@
       %option(value="100") 100 Miles
     %input(type="submit" value="Search")
 
-%h2 Instructors near #{@formatted_address}
-%hr
 - if @instructors
+  %h2 Instructors near #{@formatted_address}
+  %hr
   .instructor-list
     - @instructors.each do |ins|
       .instructor
