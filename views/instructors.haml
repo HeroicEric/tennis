@@ -3,7 +3,7 @@
   .instructor-list
     - @instructors.each do |ins|
       .instructor
-        %h3= ins.name
+        %h3= ins.link
         %p= ins.location
 - else
   %p There aren't any instructors yet.

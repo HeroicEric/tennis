@@ -25,9 +25,14 @@ GEM
       data_objects (= 0.10.6)
     haml (3.1.1)
     json (1.4.6)
+    json_pure (1.5.1)
+    oauth (0.4.4)
     rack (1.3.0)
     rack-flash (0.1.1)
       rack
+    simplegeo (0.5.1)
+      json_pure
+      oauth (>= 0.4.0)
     sinatra (1.2.6)
       rack (~> 1.1)
       tilt (>= 1.2.2, < 2.0)
@@ -45,4 +50,5 @@ DEPENDENCIES
   haml
   json
   rack-flash
+  simplegeo
   sinatra

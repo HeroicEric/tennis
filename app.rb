@@ -59,6 +59,8 @@ Dir.glob("#{Dir.pwd}/controllers/*.rb") { |m| require "#{m.chomp}" }
 
 set :haml, { :format => :html5 } # default for Haml format is :xhtml
 
+SimpleGeo::Client.set_credentials('mk9VKa5EXUT5wF58V4Tu9tEC776yHjHc', 'dZmZ6edBfbNWkRuMUMsk9bseu62bcNyn')
+
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/app.db")
 
 # Finalize initialize DB
@@ -102,4 +104,37 @@ post '/instructor' do
     status 400
     haml :instructor_new
   end
+end
+
+get '/instructor/:username' do
+  @instructor = Instructor.first(:username => params[:username])
+  haml :instructor_details
+end
+
+get '/instructor/:username/edit' do
+  @instructor = Instructor.first(:username => params[:username])
+  haml :instructor_edit
+end
+
+put '/instructor/:id' do
+  @instructor = Instructor.get(params[:id])
+  updates = {
+    :name => params[:name],
+    :username => params[:username],
+    :location => params[:location],
+    :image => params[:image],
+    :bio => params[:bio],
+    :rate => params[:rate],
+    :rating => params[:rating]
+  }
+
+  if @instructor.update(updates)
+    status 201
+    redirect '/instructor/' + @instructor.username
+  else
+    status 400
+    haml :instructor_edit
+  end
+
+
 end
