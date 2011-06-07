@@ -1,0 +1,7 @@
+%h1 Edit #{@instructor.name}
+%form(action="/instructor/#{@instructor.id}" method="post")
+  %input(type="hidden" name="_method" value="put")
+
+  = haml :instructor_form
+
+  %input(type="submit" value="Save") <a class="button" href="/instructors">Cancel</a>

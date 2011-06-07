@@ -1,0 +1,28 @@
+%section.comments
+  %h3 Got something to say?
+  %form(action="/comment" method="POST")
+    %ol
+      %li
+        %input(type="text" name="comment[author]" placeholder="Name")
+      %li
+        %input(type="text" name="comment[email]" placeholder="Email")
+      %li
+        %input(type="text" name="comment[url]" placeholder="Website")
+      %li
+        %textarea(name="comment[body]" placeholder="Tell me here.")
+      %li
+        %input(type="hidden" name="comment[post_id]" value="#{@post.id}")
+      %li
+        %input#submit(type="submit" value="Submit")
+    - unless @post.comments.empty?
+      %section.list
+        %ol
+          - @post.comments.each do |c|
+            %li.comment
+              %img(src="#{c.grav_image}")
+              %section.meat
+                %cite
+                  - unless c.url.nil?
+                    %a(href="#{c.url}")
+                      #{c.author}
+                %p #{c.body}

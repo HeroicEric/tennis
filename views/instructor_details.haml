@@ -1,0 +1,8 @@
+%h1 #{@instructor.name} (#{@instructor.username})
+%hr
+%img(src="#{@instructor.image}")
+%ul
+  %li Location: #{@instructor.location}
+  %li Bio: #{@instructor.bio}
+  %li Rate: #{@instructor.rate}/hour
+%a.button(href="/instructor/#{@instructor.username}/edit") Edit Info

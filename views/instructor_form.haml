@@ -1,0 +1,17 @@
+%label(for="name") Name
+%input(type="text" name="name" placeholder="Rafael Nadal" value="#{@instructor.name}")
+
+%label(for="username") Userame
+%input(type="text" name="username" placeholder="Raffy89" value="#{@instructor.username}")
+
+%label(for="location") Location
+%input(type="text" name="location" placeholder="123 Elephant Rd, Meriden, CT" value="#{@instructor.location}")
+
+%label(for="image") Image URL
+%input(type="text" name="image" placeholder="http://your.com/image.jpg" value="#{@instructor.image}")
+
+%label(for="bio") Bio
+%textarea(name="bio")= @instructor.bio
+
+%label(for="rate") Rate
+%input(type="text" name="rate" placeholder="X.XX" value="#{@instructor.rate}")
