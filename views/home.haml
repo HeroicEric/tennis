@@ -41,4 +41,20 @@
       map: map,
       title: "#{@formatted_address}"
     });
+    var location2 = new google.maps.LatLng(#{Instructor.first.lat}, #{Instructor.first.lng});
+    var guy = new google.maps.marker({
+      position: location2,
+      map: map,
+      title: "#{Instructor.first.name}"
+    });
   }
+
+- if @instructors
+  :javascript
+    var location = new google.maps.LatLng(#{Instructor.first.lat}, #{Instructor.first.lng});
+    var guy = new google.maps.marker({
+      position: location,
+      map: map,
+      title: "#{Instructor.first.name}"
+    });
+    marker.setMap(map);

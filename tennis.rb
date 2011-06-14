@@ -1,8 +1,12 @@
+require 'rubygems'
 require 'bundler'
 Bundler.require
 
 require 'net/http'
 require 'uri'
+
+# Set DM logger location and level
+DataMapper::Logger.new("log/dm.log", :debug)
 
 def geocode(address)
   address = address.downcase.gsub(/\s+/, '+')
@@ -59,13 +63,21 @@ Dir.glob("#{Dir.pwd}/controllers/*.rb") { |m| require "#{m.chomp}" }
 
 set :haml, { :format => :html5 } # default for Haml format is :xhtml
 
-SimpleGeo::Client.set_credentials('mk9VKa5EXUT5wF58V4Tu9tEC776yHjHc', 'dZmZ6edBfbNWkRuMUMsk9bseu62bcNyn')
+configure :development do
+  DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/tennis.db")
+end
 
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/app.db")
+configure :test do
+  DataMapper.setup(:default,"sqlite::memory:")
+end
 
 # Finalize initialize DB
 DataMapper.finalize
 DataMapper::auto_upgrade!
+
+get'/hello' do
+  "Hello World"
+end
 
 get '/' do
   haml :home

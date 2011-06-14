@@ -12,6 +12,8 @@ class Instructor
   property :rate,     Integer
   property :rating,   Integer
 
+  has n, :timeslots
+
   def link
     "<a href='/instructor/#{username}'>#{name}</a>"
   end
