@@ -8,5 +8,10 @@ gem 'dm-migrations'
 gem 'dm-validations'
 gem 'haml'
 gem 'json'
-gem 'rack-flash'
-gem 'simplegeo'
+gem 'forgery'
+
+group :test do
+  gem 'rspec'
+  gem 'rack-test'
+  gem 'forgery'
+end
