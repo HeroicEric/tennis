@@ -5,7 +5,7 @@ Bundler.require
 require 'net/http'
 require 'uri'
 
-enable :run
+enable :run, true
 set :root, File.join(File.dirname(__FILE__), "..")
 set :haml, { :format => :html5 } # default for Haml format is :xhtml
 
