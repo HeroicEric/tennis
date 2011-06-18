@@ -21,6 +21,11 @@ configure :test do
   DataMapper.setup(:default,"sqlite::memory:")
 end
 
+configure :production do
+  DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/tennis.db")
+end
+
+
 # Finalize initialize DB
 DataMapper.finalize
 DataMapper::auto_upgrade!
