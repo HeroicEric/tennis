@@ -4,5 +4,5 @@ class Court
   property :id,            Serial
   property :name,          String
 
-  has n, :timeslots
+  has n, :appointmentSlots
 end

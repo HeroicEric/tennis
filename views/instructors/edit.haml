@@ -2,6 +2,6 @@
 %form(action="/instructor/#{@instructor.id}" method="post")
   %input(type="hidden" name="_method" value="put")
 
-  = haml :instructor_form
+  = haml :'instructors/_form'
 
   %input(type="submit" value="Save") <a class="button" href="/instructors">Cancel</a>
