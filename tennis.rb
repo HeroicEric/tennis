@@ -7,6 +7,7 @@ require 'uri'
 
 set :run, true
 set :views, File.dirname(__FILE__) + "/views"
+set :public, File.dirname(__FILE__) + "/public"
 set :root, File.join(File.dirname(__FILE__), "..")
 set :haml, { :format => :html5 } # default for Haml format is :xhtml
 
@@ -24,7 +25,6 @@ end
 configure :production do
   DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/tennis.db")
 end
-
 
 # Finalize initialize DB
 DataMapper.finalize
