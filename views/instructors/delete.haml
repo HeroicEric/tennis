@@ -1,0 +1,5 @@
+%h1 Are you sure you want to delete #{@instructor.username}?
+
+%form(action="/instructor" method="post")
+	%input(name="_method" type="hidden" value="delete")
+	%input(type="submit" value="Delete") <a class="button" href="/instructor/#{@instructor.username}">Cancel</a>

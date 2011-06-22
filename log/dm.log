@@ -7692,3 +7692,206 @@ Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer al
  ~ (0.000048) DROP TABLE IF EXISTS "instructors"
  ~ (0.000004) PRAGMA table_info("instructors")
  ~ (0.000080) CREATE TABLE "instructors" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50), "username" VARCHAR(50), "location" VARCHAR(50), "lat" FLOAT, "lng" FLOAT, "image" VARCHAR(50) DEFAULT 'http://placesheen.com/100/100', "bio" TEXT, "rate" INTEGER, "rating" INTEGER)
+ ~ (0.000212) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000032) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000020) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000233) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000375) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000053) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000063) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000062) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000043) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000390) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000070) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000453) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000045) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "id" = 0 LIMIT 1
+ ~ (0.000094) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000051) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "id" = 0 LIMIT 1
+ ~ (0.000093) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "id" = 0 LIMIT 1
+ ~ (0.000101) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000051) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "id" = 1 LIMIT 1
+ ~ (0.000031) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000028) SELECT "id" FROM "instructors" WHERE "email" = 'catchy1@gmail.com' ORDER BY "id" LIMIT 1
+ ~ no such column: email (code: 1, sql state: , query: UPDATE "instructors" SET "email" = 'catchy1@gmail.com' WHERE "id" = 1, uri: sqlite3:/Users/heroiceric/Dropbox/Sinatra/tennis/tennis.db?scheme=sqlite3&user=&password=&host=&port=&query=&fragment=&adapter=sqlite3&path=/Users/heroiceric/Dropbox/Sinatra/tennis/tennis.db)
+ ~ (0.000409) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000432) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000321) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000039) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1 OFFSET 1
+ ~ (0.000038) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1 OFFSET 2
+ ~ (0.000038) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1 OFFSET 3
+ ~ (0.000038) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1 OFFSET 4
+ ~ (0.000181) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000058) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000031) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000028) SELECT "id" FROM "instructors" WHERE "email" = 'catchy1@gmail.com' ORDER BY "id" LIMIT 1
+ ~ no such column: email (code: 1, sql state: , query: UPDATE "instructors" SET "email" = 'catchy1@gmail.com' WHERE "id" = 1, uri: sqlite3:/Users/heroiceric/Dropbox/Sinatra/tennis/tennis.db?scheme=sqlite3&user=&password=&host=&port=&query=&fragment=&adapter=sqlite3&path=/Users/heroiceric/Dropbox/Sinatra/tennis/tennis.db)
+ ~ (0.000098) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000048) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ no such column: email (code: 1, sql state: , query: UPDATE "instructors" SET "email" = 'catchy1@gmail.com' WHERE "id" = 1, uri: sqlite3:/Users/heroiceric/Dropbox/Sinatra/tennis/tennis.db?scheme=sqlite3&user=&password=&host=&port=&query=&fragment=&adapter=sqlite3&path=/Users/heroiceric/Dropbox/Sinatra/tennis/tennis.db)
+ ~ (0.000309) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000087) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000047) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000053) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000060) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000342) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000062) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000032) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000274) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000056) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.017308) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000052) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.020911) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000049) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000295) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000066) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000354) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000032) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000103) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000064) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000038) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000050) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000067) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000051) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000062) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000073) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000054) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000055) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000072) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000050) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000075) SELECT "id", "name", "username", "email", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000058) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000393) SELECT "id", "name", "rating", "num_of_courts", "lights", "indoor", "wall", "clay", "grass", "proshop", "stringing", "geo_lat", "geo_lng", "street_address", "city", "state", "zip" FROM "courts" ORDER BY "id"
+ ~ (0.000079) SELECT "id", "name", "rating", "num_of_courts", "lights", "indoor", "wall", "clay", "grass", "proshop", "stringing", "geo_lat", "geo_lng", "street_address", "city", "state", "zip" FROM "courts" ORDER BY "id" LIMIT 1
+ ~ (0.000381) SELECT "id", "name", "rating", "num_of_courts", "lights", "indoor", "wall", "clay", "grass", "proshop", "stringing", "geo_lat", "geo_lng", "street_address", "city", "state", "zip" FROM "courts" ORDER BY "id" LIMIT 1
+ ~ (0.000069) SELECT "id", "description" FROM "courts" WHERE "id" = 1 ORDER BY "id"
+ ~ no such column: street_address (code: 1, sql state: , query: UPDATE "courts" SET "street_address" = '131 Godek Hill Rd, Meriden, CT 06451' WHERE "id" = 1, uri: sqlite3:/Users/heroiceric/Dropbox/Sinatra/tennis/tennis.db?scheme=sqlite3&user=&password=&host=&port=&query=&fragment=&adapter=sqlite3&path=/Users/heroiceric/Dropbox/Sinatra/tennis/tennis.db)
+ ~ (0.012561) PRAGMA table_info("courts")
+ ~ (0.000403) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000009) PRAGMA table_info("courts")
+ ~ (0.000021) SELECT sqlite_version(*)
+ ~ (0.030787) ALTER TABLE "courts" ADD COLUMN "rating" INTEGER
+ ~ (0.000021) PRAGMA table_info("courts")
+ ~ (0.048452) ALTER TABLE "courts" ADD COLUMN "description" TEXT
+ ~ (0.000036) PRAGMA table_info("courts")
+ ~ (0.036800) ALTER TABLE "courts" ADD COLUMN "num_of_courts" INTEGER
+ ~ (0.000036) PRAGMA table_info("courts")
+ ~ (0.006229) ALTER TABLE "courts" ADD COLUMN "lights" BOOLEAN
+ ~ (0.000593) PRAGMA table_info("courts")
+ ~ (0.003070) ALTER TABLE "courts" ADD COLUMN "indoor" BOOLEAN
+ ~ (0.000020) PRAGMA table_info("courts")
+ ~ (0.001269) ALTER TABLE "courts" ADD COLUMN "wall" BOOLEAN
+ ~ (0.000010) PRAGMA table_info("courts")
+ ~ (0.055562) ALTER TABLE "courts" ADD COLUMN "clay" BOOLEAN
+ ~ (0.000036) PRAGMA table_info("courts")
+ ~ (0.005886) ALTER TABLE "courts" ADD COLUMN "grass" BOOLEAN
+ ~ (0.000024) PRAGMA table_info("courts")
+ ~ (0.041716) ALTER TABLE "courts" ADD COLUMN "proshop" BOOLEAN
+ ~ (0.000028) PRAGMA table_info("courts")
+ ~ (0.032692) ALTER TABLE "courts" ADD COLUMN "stringing" BOOLEAN
+ ~ (0.000033) PRAGMA table_info("courts")
+ ~ (0.001543) ALTER TABLE "courts" ADD COLUMN "geo_lat" FLOAT
+ ~ (0.000021) PRAGMA table_info("courts")
+ ~ (0.001129) ALTER TABLE "courts" ADD COLUMN "geo_lng" FLOAT
+ ~ (0.000009) PRAGMA table_info("courts")
+ ~ (0.019290) ALTER TABLE "courts" ADD COLUMN "street_address" VARCHAR(50)
+ ~ (0.000023) PRAGMA table_info("courts")
+ ~ (0.079020) ALTER TABLE "courts" ADD COLUMN "city" VARCHAR(50)
+ ~ (0.000027) PRAGMA table_info("courts")
+ ~ (0.052103) ALTER TABLE "courts" ADD COLUMN "state" VARCHAR(50)
+ ~ (0.000025) PRAGMA table_info("courts")
+ ~ (0.093998) ALTER TABLE "courts" ADD COLUMN "zip" VARCHAR(50)
+ ~ (0.000026) PRAGMA table_info("court_schedules")
+ ~ (0.046116) CREATE TABLE "court_schedules" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "hours" TEXT, "instructor_id" INTEGER NOT NULL, "court_id" INTEGER NOT NULL)
+ ~ (0.041910) CREATE INDEX "index_court_schedules_instructor" ON "court_schedules" ("instructor_id")
+ ~ (0.018478) CREATE INDEX "index_court_schedules_court" ON "court_schedules" ("court_id")
+ ~ (0.000041) PRAGMA table_info("instructors")
+ ~ (0.000017) PRAGMA table_info("instructors")
+ ~ (0.000010) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000023) PRAGMA table_info("instructors")
+ ~ (0.006496) ALTER TABLE "instructors" ADD COLUMN "email" VARCHAR(50)
+ ~ (0.000039) PRAGMA table_info("instructors")
+ ~ (0.000016) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000039) PRAGMA table_info("instructors")
+ ~ (0.000016) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000056) PRAGMA table_info("courts")
+ ~ (0.000016) PRAGMA table_info("courts")
+ ~ (0.000009) PRAGMA table_info("courts")
+ ~ (0.000009) PRAGMA table_info("courts")
+ ~ duplicate column name: rating (code: 1, sql state: , query: ALTER TABLE "courts" ADD COLUMN "rating" INTEGER, uri: sqlite3:/Users/heroiceric/Dropbox/Sinatra/tennis/tennis.db?scheme=sqlite3&user=&password=&host=&port=&query=&fragment=&adapter=sqlite3&path=/Users/heroiceric/Dropbox/Sinatra/tennis/tennis.db)
+ ~ (0.000055) PRAGMA table_info("courts")
+ ~ (0.000474) PRAGMA table_info("courts")
+ ~ (0.000016) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000016) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000016) PRAGMA table_info("courts")
+ ~ (0.000016) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000016) PRAGMA table_info("courts")
+ ~ (0.000016) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000011) PRAGMA table_info("court_schedules")
+ ~ (0.000010) PRAGMA table_info("court_schedules")
+ ~ (0.000009) PRAGMA table_info("court_schedules")
+ ~ (0.000009) PRAGMA table_info("court_schedules")
+ ~ (0.000009) PRAGMA table_info("court_schedules")
+ ~ (0.000016) PRAGMA table_info("instructors")
+ ~ (0.000014) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000012) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000050) PRAGMA table_info("courts")
+ ~ (0.000027) PRAGMA table_info("courts")
+ ~ (0.000017) PRAGMA table_info("courts")
+ ~ (0.000016) PRAGMA table_info("courts")
+ ~ (0.000021) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000021) PRAGMA table_info("courts")
+ ~ (0.000016) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000022) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000021) PRAGMA table_info("courts")
+ ~ (0.000016) PRAGMA table_info("courts")
+ ~ (0.000016) PRAGMA table_info("courts")
+ ~ (0.000021) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000021) PRAGMA table_info("courts")
+ ~ (0.000015) PRAGMA table_info("courts")
+ ~ (0.000022) PRAGMA table_info("courts")
+ ~ (0.000018) PRAGMA table_info("court_schedules")
+ ~ (0.000015) PRAGMA table_info("court_schedules")
+ ~ (0.000014) PRAGMA table_info("court_schedules")
+ ~ (0.000015) PRAGMA table_info("court_schedules")
+ ~ (0.000014) PRAGMA table_info("court_schedules")
+ ~ (0.000015) PRAGMA table_info("instructors")
+ ~ (0.000017) PRAGMA table_info("instructors")
+ ~ (0.000013) PRAGMA table_info("instructors")
+ ~ (0.000017) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000012) PRAGMA table_info("instructors")
+ ~ (0.000047) PRAGMA table_info("instructors")
+ ~ (0.000017) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000011) PRAGMA table_info("instructors")
+ ~ (0.000012) PRAGMA table_info("instructors")

@@ -6,9 +6,10 @@ gem 'dm-core'
 gem 'dm-postgres-adapter'
 gem 'dm-migrations'
 gem 'dm-validations'
+gem 'dm-serializer'
 gem 'haml'
 gem 'json'
-gem 'forgery'
+gem 'ice_cube'
 
 group :test do
   gem 'rspec'
