@@ -5,7 +5,7 @@ Bundler.require
 require 'net/http'
 require 'uri'
 
-# Finalize initialize DB
+# Finalize initialidze DB
 DataMapper.finalize
 DataMapper::auto_upgrade!
 
