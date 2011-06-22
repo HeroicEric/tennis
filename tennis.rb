@@ -5,16 +5,7 @@ Bundler.require
 require 'net/http'
 require 'uri'
 
-<<<<<<< HEAD
-# Finalize initialidze DB
-DataMapper.finalize
-DataMapper::auto_upgrade!
-
-#require helpers
-require_relative "helpers"
-=======
 class Tennis < Sinatra::Base
->>>>>>> 7100fe53bec22517d08c5d51aaaf9fae61f9c163
 
 	#require helpers
 	require_relative "helpers"
