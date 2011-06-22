@@ -7587,3 +7587,108 @@ Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer al
  ~ (0.000024) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
  ~ (0.000033) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
  ~ (0.000021) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000093) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ no such table: instructors (code: 1, sql state: , query: SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1, uri: sqlite3::memory:?scheme=sqlite&user=&password=&host=&port=&query=&fragment=&adapter=sqlite3&path=:memory:)
+ ~ (0.000095) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ no such table: instructors (code: 1, sql state: , query: SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1, uri: sqlite3::memory:?scheme=sqlite&user=&password=&host=&port=&query=&fragment=&adapter=sqlite3&path=:memory:)
+ ~ (0.000092) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ no such table: instructors (code: 1, sql state: , query: SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1, uri: sqlite3::memory:?scheme=sqlite&user=&password=&host=&port=&query=&fragment=&adapter=sqlite3&path=:memory:)
+ ~ (0.000626) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE ("lat" < 41.61050193003907 AND "lat" > 41.46580506996093 AND "lng" > -72.90369954084495 AND "lng" < -72.71038745915503) ORDER BY "id"
+ ~ (0.000023) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000021) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000021) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000025) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000020) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000020) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000037) SELECT sqlite_version(*)
+ ~ (0.000063) DROP TABLE IF EXISTS "appointment_slots"
+ ~ (0.000007) PRAGMA table_info("appointment_slots")
+ ~ (0.000215) CREATE TABLE "appointment_slots" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "s_time" TIMESTAMP, "e_time" TIMESTAMP, "booked" BOOLEAN DEFAULT 'f', "instructor_id" INTEGER NOT NULL, "court_id" INTEGER NOT NULL)
+ ~ (0.000072) CREATE INDEX "index_appointment_slots_instructor" ON "appointment_slots" ("instructor_id")
+ ~ (0.000058) CREATE INDEX "index_appointment_slots_court" ON "appointment_slots" ("court_id")
+ ~ (0.000008) DROP TABLE IF EXISTS "courts"
+ ~ (0.000005) PRAGMA table_info("courts")
+ ~ (0.000064) CREATE TABLE "courts" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50))
+ ~ (0.000009) DROP TABLE IF EXISTS "instructors"
+ ~ (0.000005) PRAGMA table_info("instructors")
+ ~ (0.000083) CREATE TABLE "instructors" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50), "username" VARCHAR(50), "location" VARCHAR(50), "lat" FLOAT, "lng" FLOAT, "image" VARCHAR(50) DEFAULT 'http://placesheen.com/100/100', "bio" TEXT, "rate" INTEGER, "rating" INTEGER)
+ ~ (0.000128) DROP TABLE IF EXISTS "appointment_slots"
+ ~ (0.000008) PRAGMA table_info("appointment_slots")
+ ~ (0.000089) CREATE TABLE "appointment_slots" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "s_time" TIMESTAMP, "e_time" TIMESTAMP, "booked" BOOLEAN DEFAULT 'f', "instructor_id" INTEGER NOT NULL, "court_id" INTEGER NOT NULL)
+ ~ (0.000064) CREATE INDEX "index_appointment_slots_instructor" ON "appointment_slots" ("instructor_id")
+ ~ (0.000058) CREATE INDEX "index_appointment_slots_court" ON "appointment_slots" ("court_id")
+ ~ (0.000045) DROP TABLE IF EXISTS "courts"
+ ~ (0.000005) PRAGMA table_info("courts")
+ ~ (0.000063) CREATE TABLE "courts" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50))
+ ~ (0.000048) DROP TABLE IF EXISTS "instructors"
+ ~ (0.000005) PRAGMA table_info("instructors")
+ ~ (0.000080) CREATE TABLE "instructors" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50), "username" VARCHAR(50), "location" VARCHAR(50), "lat" FLOAT, "lng" FLOAT, "image" VARCHAR(50) DEFAULT 'http://placesheen.com/100/100', "bio" TEXT, "rate" INTEGER, "rating" INTEGER)
+ ~ (0.000036) SELECT sqlite_version(*)
+ ~ (0.000062) DROP TABLE IF EXISTS "appointment_slots"
+ ~ (0.000007) PRAGMA table_info("appointment_slots")
+ ~ (0.000185) CREATE TABLE "appointment_slots" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "s_time" TIMESTAMP, "e_time" TIMESTAMP, "booked" BOOLEAN DEFAULT 'f', "instructor_id" INTEGER NOT NULL, "court_id" INTEGER NOT NULL)
+ ~ (0.000062) CREATE INDEX "index_appointment_slots_instructor" ON "appointment_slots" ("instructor_id")
+ ~ (0.000055) CREATE INDEX "index_appointment_slots_court" ON "appointment_slots" ("court_id")
+ ~ (0.000008) DROP TABLE IF EXISTS "courts"
+ ~ (0.000004) PRAGMA table_info("courts")
+ ~ (0.000061) CREATE TABLE "courts" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50))
+ ~ (0.000008) DROP TABLE IF EXISTS "instructors"
+ ~ (0.000004) PRAGMA table_info("instructors")
+ ~ (0.000077) CREATE TABLE "instructors" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50), "username" VARCHAR(50), "location" VARCHAR(50), "lat" FLOAT, "lng" FLOAT, "image" VARCHAR(50) DEFAULT 'http://placesheen.com/100/100', "bio" TEXT, "rate" INTEGER, "rating" INTEGER)
+ ~ (0.000081) DROP TABLE IF EXISTS "appointment_slots"
+ ~ (0.000005) PRAGMA table_info("appointment_slots")
+ ~ (0.000074) CREATE TABLE "appointment_slots" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "s_time" TIMESTAMP, "e_time" TIMESTAMP, "booked" BOOLEAN DEFAULT 'f', "instructor_id" INTEGER NOT NULL, "court_id" INTEGER NOT NULL)
+ ~ (0.000057) CREATE INDEX "index_appointment_slots_instructor" ON "appointment_slots" ("instructor_id")
+ ~ (0.000054) CREATE INDEX "index_appointment_slots_court" ON "appointment_slots" ("court_id")
+ ~ (0.000046) DROP TABLE IF EXISTS "courts"
+ ~ (0.000005) PRAGMA table_info("courts")
+ ~ (0.000060) CREATE TABLE "courts" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50))
+ ~ (0.000045) DROP TABLE IF EXISTS "instructors"
+ ~ (0.000005) PRAGMA table_info("instructors")
+ ~ (0.000075) CREATE TABLE "instructors" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50), "username" VARCHAR(50), "location" VARCHAR(50), "lat" FLOAT, "lng" FLOAT, "image" VARCHAR(50) DEFAULT 'http://placesheen.com/100/100', "bio" TEXT, "rate" INTEGER, "rating" INTEGER)
+ ~ (0.000036) SELECT sqlite_version(*)
+ ~ (0.000066) DROP TABLE IF EXISTS "appointment_slots"
+ ~ (0.000007) PRAGMA table_info("appointment_slots")
+ ~ (0.000181) CREATE TABLE "appointment_slots" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "s_time" TIMESTAMP, "e_time" TIMESTAMP, "booked" BOOLEAN DEFAULT 'f', "instructor_id" INTEGER NOT NULL, "court_id" INTEGER NOT NULL)
+ ~ (0.000065) CREATE INDEX "index_appointment_slots_instructor" ON "appointment_slots" ("instructor_id")
+ ~ (0.000055) CREATE INDEX "index_appointment_slots_court" ON "appointment_slots" ("court_id")
+ ~ (0.000008) DROP TABLE IF EXISTS "courts"
+ ~ (0.000005) PRAGMA table_info("courts")
+ ~ (0.000062) CREATE TABLE "courts" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50))
+ ~ (0.000008) DROP TABLE IF EXISTS "instructors"
+ ~ (0.000005) PRAGMA table_info("instructors")
+ ~ (0.000082) CREATE TABLE "instructors" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50), "username" VARCHAR(50), "location" VARCHAR(50), "lat" FLOAT, "lng" FLOAT, "image" VARCHAR(50) DEFAULT 'http://placesheen.com/100/100', "bio" TEXT, "rate" INTEGER, "rating" INTEGER)
+ ~ (0.000118) DROP TABLE IF EXISTS "appointment_slots"
+ ~ (0.000007) PRAGMA table_info("appointment_slots")
+ ~ (0.000089) CREATE TABLE "appointment_slots" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "s_time" TIMESTAMP, "e_time" TIMESTAMP, "booked" BOOLEAN DEFAULT 'f', "instructor_id" INTEGER NOT NULL, "court_id" INTEGER NOT NULL)
+ ~ (0.000065) CREATE INDEX "index_appointment_slots_instructor" ON "appointment_slots" ("instructor_id")
+ ~ (0.000059) CREATE INDEX "index_appointment_slots_court" ON "appointment_slots" ("court_id")
+ ~ (0.000046) DROP TABLE IF EXISTS "courts"
+ ~ (0.000005) PRAGMA table_info("courts")
+ ~ (0.000063) CREATE TABLE "courts" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50))
+ ~ (0.000048) DROP TABLE IF EXISTS "instructors"
+ ~ (0.000005) PRAGMA table_info("instructors")
+ ~ (0.000080) CREATE TABLE "instructors" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50), "username" VARCHAR(50), "location" VARCHAR(50), "lat" FLOAT, "lng" FLOAT, "image" VARCHAR(50) DEFAULT 'http://placesheen.com/100/100', "bio" TEXT, "rate" INTEGER, "rating" INTEGER)
+ ~ (0.000036) SELECT sqlite_version(*)
+ ~ (0.000064) DROP TABLE IF EXISTS "appointment_slots"
+ ~ (0.000007) PRAGMA table_info("appointment_slots")
+ ~ (0.000182) CREATE TABLE "appointment_slots" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "s_time" TIMESTAMP, "e_time" TIMESTAMP, "booked" BOOLEAN DEFAULT 'f', "instructor_id" INTEGER NOT NULL, "court_id" INTEGER NOT NULL)
+ ~ (0.000063) CREATE INDEX "index_appointment_slots_instructor" ON "appointment_slots" ("instructor_id")
+ ~ (0.000055) CREATE INDEX "index_appointment_slots_court" ON "appointment_slots" ("court_id")
+ ~ (0.000007) DROP TABLE IF EXISTS "courts"
+ ~ (0.000005) PRAGMA table_info("courts")
+ ~ (0.000061) CREATE TABLE "courts" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50))
+ ~ (0.000007) DROP TABLE IF EXISTS "instructors"
+ ~ (0.000004) PRAGMA table_info("instructors")
+ ~ (0.000077) CREATE TABLE "instructors" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50), "username" VARCHAR(50), "location" VARCHAR(50), "lat" FLOAT, "lng" FLOAT, "image" VARCHAR(50) DEFAULT 'http://placesheen.com/100/100', "bio" TEXT, "rate" INTEGER, "rating" INTEGER)
+ ~ (0.000122) DROP TABLE IF EXISTS "appointment_slots"
+ ~ (0.000007) PRAGMA table_info("appointment_slots")
+ ~ (0.000090) CREATE TABLE "appointment_slots" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "s_time" TIMESTAMP, "e_time" TIMESTAMP, "booked" BOOLEAN DEFAULT 'f', "instructor_id" INTEGER NOT NULL, "court_id" INTEGER NOT NULL)
+ ~ (0.000064) CREATE INDEX "index_appointment_slots_instructor" ON "appointment_slots" ("instructor_id")
+ ~ (0.000057) CREATE INDEX "index_appointment_slots_court" ON "appointment_slots" ("court_id")
+ ~ (0.000046) DROP TABLE IF EXISTS "courts"
+ ~ (0.000005) PRAGMA table_info("courts")
+ ~ (0.000062) CREATE TABLE "courts" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50))
+ ~ (0.000048) DROP TABLE IF EXISTS "instructors"
+ ~ (0.000004) PRAGMA table_info("instructors")
+ ~ (0.000080) CREATE TABLE "instructors" ("id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, "name" VARCHAR(50), "username" VARCHAR(50), "location" VARCHAR(50), "lat" FLOAT, "lng" FLOAT, "image" VARCHAR(50) DEFAULT 'http://placesheen.com/100/100', "bio" TEXT, "rate" INTEGER, "rating" INTEGER)

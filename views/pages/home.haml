@@ -25,31 +25,32 @@
 
 #map(style="width:400px; height: 400px")
 
-:javascript
-  function initialize() {
-    var location = new google.maps.LatLng(#{@lat}, #{@lng});
-    var myOptions = {
-      zoom: 13,
-      center: location,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById("map"),
-      myOptions);
+-if @instructors
+  :javascript
+    function initialize() {
+      var location = new google.maps.LatLng(#{@lat}, #{@lng});
+      var myOptions = {
+        zoom: 13,
+        center: location,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(document.getElementById("map"),
+        myOptions);
 
-    var marker = new google.maps.Marker({
-      position: location,
-      map: map,
-      title: "#{@formatted_address}"
-    });
-    var location2 = new google.maps.LatLng(#{Instructor.first.lat}, #{Instructor.first.lng});
-    var guy = new google.maps.marker({
-      position: location2,
-      map: map,
-      title: "#{Instructor.first.name}"
-    });
-  }
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: "#{@formatted_address}"
+      });
+      var location2 = new google.maps.LatLng(#{Instructor.first.lat}, #{Instructor.first.lng});
+      var guy = new google.maps.marker({
+        position: location2,
+        map: map,
+        title: "#{Instructor.first.name}"
+      });
+    }
 
-- if @instructors
+
   :javascript
     var location = new google.maps.LatLng(#{Instructor.first.lat}, #{Instructor.first.lng});
     var guy = new google.maps.marker({

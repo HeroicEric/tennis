@@ -11,7 +11,7 @@ require 'rspec'
 Capybara.app = Tennis
 
 class TennisWorld
-  include Capybara
+  include Capybara::DSL
   include RSpec::Expectations
   include RSpec::Matchers
 end

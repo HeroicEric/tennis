@@ -1,3 +1,8 @@
+### ADMIN ###
+def logged_in
+  false
+end
+
 def geocode(address)
   address = address.downcase.gsub(/\s+/, '+')
   url = "http://maps.googleapis.com/maps/api/geocode/json?address=#{address}&sensor=false"
