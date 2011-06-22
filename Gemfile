@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'sinatra'
+gem 'sinatra', :require => 'sinatra/base'
 gem 'dm-sqlite-adapter'
 gem 'dm-core'
 gem 'dm-postgres-adapter'
@@ -13,5 +13,7 @@ gem 'forgery'
 group :test do
   gem 'rspec'
   gem 'rack-test'
+  gem 'cucumber'
+  gem 'capybara'
   gem 'forgery'
 end

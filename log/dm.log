@@ -7568,3 +7568,22 @@ Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer al
  ~ (0.000023) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
  ~ (0.000021) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
  ~ (0.000030) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.004073) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000025) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000021) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000034) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000023) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000021) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id" LIMIT 1
+ ~ (0.000031) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000049) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000033) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000021) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000032) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000026) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000223) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" ORDER BY "id"
+ ~ (0.000040) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000019) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000228) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000024) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
+ ~ (0.000033) SELECT "id", "name", "username", "location", "lat", "lng", "image", "rate", "rating" FROM "instructors" WHERE "username" = 'heroiceric' ORDER BY "id" LIMIT 1
+ ~ (0.000021) SELECT "id", "bio" FROM "instructors" WHERE "id" = 1 ORDER BY "id"
