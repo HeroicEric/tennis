@@ -5,20 +5,13 @@ Bundler.require
 require 'net/http'
 require 'uri'
 
-# Finalize initialize DB
-DataMapper.finalize
-DataMapper::auto_upgrade!
-
-#require helpers
-require_relative "helpers"
-
-# Make Tennis a subclas of Sinatra::Base
-class Tennis < Sinatra::Base; end;
-
-# Set DM logger location and level
-DataMapper::Logger.new("log/dm.log", :debug)
-
 class Tennis < Sinatra::Base
+
+	#require helpers
+	require_relative "helpers"
+
+	# Set DM logger location and level
+	DataMapper::Logger.new("log/dm.log", :debug)
 
 	# Configure Environments
 	configure :development do DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/tennis.db") end
@@ -51,3 +44,7 @@ class Tennis < Sinatra::Base
 	end
 
 end
+
+# Finalize initialize DB
+DataMapper.finalize
+DataMapper::auto_upgrade!

@@ -1,5 +1,5 @@
 %h1 Edit #{@instructor.name}
-%form(action="/instructor/#{@instructor.id}" method="post")
+%form(action="/instructor/#{@instructor.username}" method="post")
   %input(type="hidden" name="_method" value="put")
 
   = haml :'instructors/_form'

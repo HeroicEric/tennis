@@ -1,15 +1,18 @@
 class Tennis
 
+  # List Instructors
   get '/instructors' do
     @instructors = Instructor.all
     haml :'instructors/index'
   end
 
+  # New Instructor
   get '/instructor/new' do
     @instructor = Instructor.new
     haml :'instructors/new'
   end
 
+  #Create Instructor
   post '/instructor' do
     @geo = geocode(params[:location])
 
@@ -29,18 +32,21 @@ class Tennis
     end
   end
 
+  # Show Profile
   get '/instructor/:username' do
     @instructor = Instructor.first(:username => params[:username])
-    haml :'instructors/profile'
+    haml :'instructors/show'
   end
 
+  # Edit Instructor
   get '/instructor/:username/edit' do
     @instructor = Instructor.first(:username => params[:username])
     haml :'instructors/edit'
   end
 
-  put '/instructor/:id' do
-    @instructor = Instructor.get(params[:id])
+  # Update Instructor
+  put '/instructor/:username' do
+    @instructor = Instructor.first(params[:username])
     updates = {
       :name => params[:name],
       :username => params[:username],
@@ -58,6 +64,18 @@ class Tennis
       status 400
       haml :'instructors/edit'
     end
+  end
+
+  # Delete Page
+  get '/instructor/:username/delete' do
+    @instructor = Instructor.first(params[:username])
+    haml :'instructors/delete'
+  end
+
+  # Delete Instructor
+  delete '/instructor/:username' do
+    Instructor.first(params[:username]).destroy
+    redirect '/instructors'
   end
 
 end

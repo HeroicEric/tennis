@@ -31,6 +31,7 @@ GEM
     dm-postgres-adapter (1.1.0)
       dm-do-adapter (~> 1.1.0)
       do_postgres (~> 0.10.2)
+    dm-serializer (0.10.0)
     dm-sqlite-adapter (1.1.0)
       dm-do-adapter (~> 1.1.0)
       do_sqlite3 (~> 0.10.2)
@@ -46,6 +47,7 @@ GEM
     gherkin (2.4.1)
       json (>= 1.4.6)
     haml (3.1.2)
+    ice_cube (0.6.8)
     json (1.5.1)
     json_pure (1.5.3)
     mime-types (1.16)
@@ -84,10 +86,12 @@ DEPENDENCIES
   dm-core
   dm-migrations
   dm-postgres-adapter
+  dm-serializer
   dm-sqlite-adapter
   dm-validations
   forgery
   haml
+  ice_cube
   json
   rack-test
   rspec
