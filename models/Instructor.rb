@@ -14,7 +14,7 @@ class Instructor
   property :rate,     Integer
   property :rating,   Integer
 
-  has n, :courtSchedules
+  has n, :schedules
 
   validates_presence_of      :email, :name
   validates_length_of        :email, :min => 3, :max => 100

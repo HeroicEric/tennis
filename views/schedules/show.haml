@@ -1,0 +1,25 @@
+%h1 #{@instructor.name}'s Schedule at #{@court.name}
+%br
+#calendar
+
+#event_edit_container
+	%form
+		%input(type="hidden")
+		%ul
+			%li
+				%span Date:
+				%span.date_holder
+			%li
+				%label(for="start") Start Time:
+				%select(name="start")
+					%option(value="") Select Start Time
+			%li
+				%label(for="end") End Time:
+				%select(name="start")
+					%option(value="") Select Start Time
+			%li
+				%label(for="title") Title:
+				%input(type="text" name="title")
+			%li
+				%label(for="body") Body:
+				%textarea(name="body")

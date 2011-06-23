@@ -22,5 +22,5 @@ class Court
   property :state,          String
   property :zip,            String
 
-  has n, :courtSchedules
+  has n, :schedules
 end

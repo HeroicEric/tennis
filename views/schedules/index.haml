@@ -1,0 +1,12 @@
+%h1 All Schedules
+- unless @schedules.empty?
+	.schedule-list
+		- @schedules.each do |schedule|
+			- instructor = Instructor.get(schedule.instructor_id)
+			- court = Court.get(schedule.court_id)
+			#schedule
+				%h3 #{instructor.name} at #{court.name}
+				%p #{schedule.get_hours}		
+			
+- else
+	%p No Schedules have been created yet.
